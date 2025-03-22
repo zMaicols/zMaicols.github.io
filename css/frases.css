@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff0000, #ff7300);
+    color: white;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 90%;
+    position: relative;
+}
+
+.box {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.center {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #ff007f, #ff7300);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.next-button {
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #ff7300, #ff0000);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.next-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff0000, #ff7300);
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header {
+        font-size: 1.5em;
+        width: 80%;
+    }
+
+    .next-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+#audio {
+    display: none;
+}
